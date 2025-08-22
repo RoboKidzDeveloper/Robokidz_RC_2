@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/control_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    android:backgroundTint="#FEFEFE"
+    tools:context=".ControlActivity">
+    <!--    android:background = "@mipmap/ic_launcher_white"-->
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/view_ip_text"
+        android:layout_width="280dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="60dp"
+        android:elevation="1dp"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/mv_left"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
+            android:layout_marginBottom="49dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/left_move" />
+
+        <ImageView
+            android:id="@+id/mv_front"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
+            android:layout_marginStart="49dp"
+            android:rotation="90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_move" />
+
+        <ImageView
+            android:id="@+id/mv_right"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
+            android:layout_marginBottom="49dp"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/left_move" />
+
+
+        <ImageView
+            android:id="@+id/mv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="49dp"
+            android:rotation="270"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/left_move" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageRobo"
+        android:layout_width="445dp"
+        android:layout_height="221dp"
+        android:alpha="0.3"
+        android:background="#FEFEFE"
+        android:backgroundTint="#FDFDFD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar"
+        app:layout_constraintVertical_bias="0.335" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="195dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#096eb6"
+            android:text="Start"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="10.01sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/stop_btn"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#096eb6"
+            android:text="Stop"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="10.01sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_right"
+        android:layout_width="141dp"
+        android:layout_height="141dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/circle_2" />
+
+        <ImageView
+            android:id="@+id/img_down"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/cross_2" />
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            app:circularflow_defaultRadius="3dp"
+            app:circularflow_radiusInDP="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/square_2" />
+
+        <ImageView
+            android:id="@+id/img_up"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/triangle_2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="135dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:text="Connection status"
+        app:layout_constraintEnd_toStartOf="@+id/con_status"
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar" />
+
+    <ImageView
+        android:id="@+id/con_status"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar"
+        app:srcCompat="@android:drawable/presence_busy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
