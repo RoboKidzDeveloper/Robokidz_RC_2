@@ -13,6 +13,7 @@ android {
         versionCode = 17
         versionName = "1.8"
 
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
